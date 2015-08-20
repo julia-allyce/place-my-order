@@ -1,0 +1,6 @@
+# General
+target
+node_modules
+!node_modules/components
+.DS_Store
+npm-debug.log
