@@ -1,17 +1,19 @@
-import AppMap from "can-ssr/app-map";
-import route from "can/route/";
+import AppMap from 'can-ssr/app-map';
+import route from 'can/route/';
+import 'can/route/pushstate/';
 import 'can/map/define/';
 
 const AppViewModel = AppMap.extend({
   define: {
-    message: {
-      value: 'Hello World!'
-    },
     title: {
-      value: 'place-my-order',
-      serialize: false
+      serialize: false,
+      value: 'place-my-order'
     }
   }
 });
+
+route(':page', { page: 'home' });
+route(':page/:slug', { slug: null });
+route(':page/:slug/:action', { slug: null, action: null });
 
 export default AppViewModel;
