@@ -12,7 +12,7 @@ State.List = can.List.extend({
 }, {});
 
 export const stateConnection = superMap({
-  url: 'api/states',
+  url: '/api/states',
   idProp: 'short',
   Map: State,
   List: State.List,
